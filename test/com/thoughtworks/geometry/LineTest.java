@@ -19,6 +19,12 @@ public class LineTest {
         assertEquals(1, line.length(), 0.2d);
     }
 
+    @Test
+    public void havingBothStartPointsAndEndPointsOnYAxis() {
+        Line line = new Line(0.0, 1.0, 0.0, 2.0);
+        assertEquals(1, line.length(), 0.2d);
+    }
+
 
 
 }
