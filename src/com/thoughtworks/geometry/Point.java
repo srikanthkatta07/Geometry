@@ -14,6 +14,6 @@ public class Point {
         if (that == null)
             return false;
         Point point = (Point) that;
-        return point.x==this.x;
+        return point.x == this.x && point.y == this.y;
     }
 }
