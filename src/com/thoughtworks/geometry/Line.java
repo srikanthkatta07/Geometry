@@ -29,6 +29,10 @@ public class Line {
         if (that == null || !(that instanceof Line))
             return false;
         Line thatLine = (Line) that;
+        return comparingCoordinates(thatLine);
+    }
+
+    private boolean comparingCoordinates(Line thatLine) {
         return thatLine.x1 == this.x1 && thatLine.y1 == this.y1 && thatLine.x2 == this.x2 && thatLine.y2 == this.y2;
     }
 }
