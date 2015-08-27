@@ -28,7 +28,7 @@ public class Line {
     public boolean equals(Object that) {
         if (that == null || !(that instanceof Line))
             return false;
-        else
-            return true;
+        Line thatLine = (Line) that;
+        return thatLine.x1 == this.x1;
     }
 }
