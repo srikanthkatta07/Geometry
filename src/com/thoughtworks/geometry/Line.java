@@ -17,6 +17,10 @@ public class Line {
     }
 
     public double length() {
-        return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+        return sqrt(squareOfDifference(x1, x2) + squareOfDifference(y1, y2));
+    }
+
+    private double squareOfDifference(double value1, double value2) {
+        return pow(value1 - value2, 2);
     }
 }
