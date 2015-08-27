@@ -33,14 +33,14 @@ public class Line {
         double thatX2 = thatLine.x2;
         double thatY1 = thatLine.y1;
         double thatY2 = thatLine.y2;
-        return comparingCoordinatesInterchably(thatX1, thatX2, thatY1, thatY2);
+        return comparingCoordinatesInterchably(thatX1, thatY1, thatX2, thatY2);
     }
 
-    private boolean comparingCoordinatesInterchably(double thatX1, double thatX2, double thatY1, double thatY2) {
-        return comparingCoordinates(thatX1, thatX2, thatY1, thatY2) || comparingCoordinates(thatX2, thatX1, thatY2, thatY1);
+    private boolean comparingCoordinatesInterchably(double thatX1, double thatY1, double thatX2, double thatY2) {
+        return comparingCoordinates(thatX1, thatY1, thatX2, thatY2) || comparingCoordinates(thatX2, thatY2, thatX1, thatY1);
     }
 
-    private boolean comparingCoordinates(double x1, double x2, double y1, double y2) {
+    private boolean comparingCoordinates(double x1, double y1, double x2, double y2) {
         return x1 == this.x1 && y1 == this.y1 && x2 == this.x2 && y2 == this.y2;
     }
 }
