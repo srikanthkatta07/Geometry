@@ -79,7 +79,14 @@ public class LineTest {
         Line line2 = new Line(1.0, 3.0, 3.0, 2.0);
 
         assertNotEquals(line1, line2);
+    }
 
+    @Test
+    public void shouldNotEqualsToOtherLineWhichHasDifferentX2Points() {
+        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
+        Line line2 = new Line(1.0, 2.0, 4.0, 2.0);
+
+        assertNotEquals(line1, line2);
     }
 
 }
