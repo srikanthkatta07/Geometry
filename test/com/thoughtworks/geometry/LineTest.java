@@ -37,6 +37,10 @@ public class LineTest {
         assertEquals(2.236, line.length(), 0.2d);
     }
 
-
+    @Test
+    public void shouldEqualToItself() {
+        Line line = new Line(1.0, 2.0, 3.0, 2.0);
+        assertEquals(line, line);
+    }
 
 }
