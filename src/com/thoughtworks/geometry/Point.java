@@ -10,9 +10,10 @@ public class Point {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(obj == null)
+    public boolean equals(Object that) {
+        if (that == null)
             return false;
-        return true;
+        Point point = (Point) that;
+        return point.x==this.x;
     }
 }

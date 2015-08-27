@@ -21,4 +21,12 @@ public class PointTest {
         assertNotEquals(point, null);
     }
 
+    @Test
+    public void shouldNotEqualsToAnotherPointWhichHasDifferentXValues() {
+        Point point1 = new Point(1.0, 2.0);
+        Point point2 = new Point(2.0, 2.0);
+
+        assertNotEquals(point1, point2);
+    }
+
 }
