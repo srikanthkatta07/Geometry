@@ -23,4 +23,9 @@ public class Line {
     private double squareOfDifference(double value1, double value2) {
         return pow(value1 - value2, 2);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
