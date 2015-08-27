@@ -49,4 +49,11 @@ public class LineTest {
         assertEquals(line, line);
     }
 
+    @Test
+    public void shouldNotEqualsToNull() {
+        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
+        Line line2 = null;
+        assertNotEquals(line1, line2);
+    }
+
 }

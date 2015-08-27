@@ -25,7 +25,10 @@ public class Line {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return true;
+    public boolean equals(Object that) {
+        if (that == null)
+            return false;
+        else
+            return true;
     }
 }
