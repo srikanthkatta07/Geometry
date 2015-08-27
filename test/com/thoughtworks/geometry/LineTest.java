@@ -25,6 +25,12 @@ public class LineTest {
         assertEquals(1, line.length(), 0.2d);
     }
 
+    @Test
+    public void havingBothStartPointsAndEndPointsOnDiagonalAxis() {
+        Line line = new Line(1.0, 1.0, 2.0, 2.0);
+        assertEquals(1.414213, line.length(), 0.2d);
+    }
+
 
 
 }

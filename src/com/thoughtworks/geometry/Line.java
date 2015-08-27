@@ -1,5 +1,7 @@
 package com.thoughtworks.geometry;
 
+import static java.lang.StrictMath.*;
+
 public class Line {
 
     private double x1;
@@ -15,8 +17,6 @@ public class Line {
     }
 
     public double length() {
-        if (y1 == 0 && y2 == 0)
-            return x2 - x1;
-        return y2 - y1;
+        return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     }
 }
