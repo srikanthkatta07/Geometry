@@ -29,6 +29,6 @@ public class Line {
         if (that == null || !(that instanceof Line))
             return false;
         Line thatLine = (Line) that;
-        return thatLine.x1 == this.x1;
+        return thatLine.x1 == this.x1 && thatLine.y1 == this.y1;
     }
 }
