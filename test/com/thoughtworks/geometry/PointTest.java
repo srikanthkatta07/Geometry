@@ -45,4 +45,11 @@ public class PointTest {
         assertEquals(point1, point2);
     }
 
+    @Test
+    public void shouldReturnZeroDistanceFromItSelf() {
+        Point point1 = new Point(1.0, 2.0);
+
+        assertEquals(point1, point1);
+    }
+
 }

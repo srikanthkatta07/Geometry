@@ -7,10 +7,9 @@ public class Line {
     private Point startPoint;
     private Point endPoint;
 
-    public Line(double x1, double y1, double x2, double y2) {
-
-        startPoint = new Point(x1, y1);
-        endPoint = new Point(x2, y2);
+    public Line(Point point1, Point point2) {
+        startPoint = point1;
+        endPoint = point2;
     }
 
     public double length() {

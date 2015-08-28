@@ -9,65 +9,83 @@ public class LineTest {
 
     @Test
     public void havingSameStartPointsAndEndPointsHasLengthEqualsToZero() {
-        Line line = new Line(1.0, 1.0, 1.0, 1.0);
+        Point point1 = new Point(1.0, 1.0);
+        Point point2 = new Point(1.0, 1.0);
+        Line line = new Line(point1, point2);
 
         assertEquals(0.0d, line.length(), 0.2d);
     }
 
     @Test
     public void havingBothStartPointsAndEndPointsOnXAxis() {
-        Line line = new Line(1.0, 0.0, 2.0, 0.0);
+        Point point1 = new Point(1.0, 0.0);
+        Point point2 = new Point(2.0, 0.0);
+        Line line = new Line(point1, point2);
 
         assertEquals(1, line.length(), 0.2d);
     }
 
     @Test
     public void havingBothStartPointsAndEndPointsOnYAxis() {
-        Line line = new Line(0.0, 1.0, 0.0, 2.0);
+
+        Point point1 = new Point(0.0, 1.0);
+        Point point2 = new Point(0.0, 2.0);
+        Line line = new Line(point1, point2);
 
         assertEquals(1, line.length(), 0.2d);
     }
 
     @Test
     public void havingBothStartPointsAndEndPointsOnDiagonalAxis() {
-        Line line = new Line(1.0, 1.0, 2.0, 2.0);
+
+        Point point1 = new Point(1.0, 1.0);
+        Point point2 = new Point(2.0, 2.0);
+        Line line = new Line(point1, point2);
 
         assertEquals(1.414213, line.length(), 0.2d);
     }
 
     @Test
     public void havingBothStartPointsAndEndPointsOnCurve() {
-        Line line = new Line(1.0, 1.0, 3.0, 2.0);
+        Point point1 = new Point(1.0, 1.0);
+        Point point2 = new Point(3.0, 2.0);
+        Line line = new Line(point1, point2);
 
         assertEquals(2.236, line.length(), 0.2d);
     }
 
     @Test
     public void shouldEqualToItself() {
-        Line line = new Line(1.0, 2.0, 3.0, 2.0);
+        Point point1 = new Point(1.0, 1.0);
+        Point point2 = new Point(1.0, 1.0);
 
-        assertEquals(line, line);
+        assertEquals(new Line(point1, point2), new Line(point1, point2));
     }
 
     @Test
     public void shouldNotEqualsToNull() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
+
+        Point point1 = new Point(1.0, 2.0);
+        Point point2 = new Point(3.0, 2.0);
         Line line2 = null;
 
-        assertNotEquals(line1, line2);
+        assertNotEquals(new Line(point1, point2), line2);
     }
 
     @Test
     public void shouldNotEqualsToOtherObjectWhcichIsNotALine() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
+        Point point1 = new Point(1.0, 2.0);
+        Point point2 = new Point(3.0, 2.0);
 
-        assertNotEquals(line1, 2);
+        assertNotEquals(new Line(point1, point2), 2);
     }
 
     @Test
     public void shouldNotEqualsToOtherLineWhichHasDifferentX1Points() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
-        Line line2 = new Line(3.0, 2.0, 3.0, 2.0);
+
+
+        Line line1 = new Line(new Point(1.0, 2.0), new Point(3.0, 2.0));
+        Line line2 = new Line(new Point(3.0, 2.0), new Point(3.0, 2.0));
 
         assertNotEquals(line1, line2);
 
@@ -75,24 +93,24 @@ public class LineTest {
 
     @Test
     public void shouldNotEqualsToOtherLineWhichHasDifferentY1Points() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
-        Line line2 = new Line(1.0, 3.0, 3.0, 2.0);
+        Line line1 = new Line(new Point(1.0, 2.0), new Point(3.0, 2.0));
+        Line line2 = new Line(new Point(1.0, 3.0), new Point(3.0, 2.0));
 
         assertNotEquals(line1, line2);
     }
 
     @Test
     public void shouldNotEqualsToOtherLineWhichHasDifferentX2Points() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
-        Line line2 = new Line(1.0, 2.0, 4.0, 2.0);
+        Line line1 = new Line(new Point(1.0, 2.0), new Point(3.0, 2.0));
+        Line line2 = new Line(new Point(1.0, 2.0), new Point(4.0, 2.0));
 
         assertNotEquals(line1, line2);
     }
 
     @Test
     public void shouldNotEqualsToOtherLineWhichHasDifferentY2Points() {
-        Line line1 = new Line(1.0, 2.0, 3.0, 2.0);
-        Line line2 = new Line(1.0, 2.0, 3.0, 4.0);
+        Line line1 = new Line(new Point(1.0, 2.0), new Point(3.0, 2.0));
+        Line line2 = new Line(new Point(1.0, 2.0), new Point(3.0, 4.0));
 
         assertNotEquals(line1, line2);
     }
@@ -100,12 +118,11 @@ public class LineTest {
 
     @Test
     public void shouldEqualsToOtherLineWhichHavingItsSwapingCoordinates() {
-        Line line1 = new Line(1.0, 0.0, 0.0, 1.0);
-        Line line2 = new Line(0.0, 1.0, 1.0, 0.0);
+        Line line1 = new Line(new Point(1.0, 0.0), new Point(0.0, 1.0));
+        Line line2 = new Line(new Point(0.0, 1.0), new Point(1.0, 0.0));
 
         assertEquals(line1, line2);
     }
-
 
 
 }
