@@ -28,7 +28,7 @@ public class Point {
         return point.x == this.x && point.y == this.y;
     }
 
-    public double calculateDistance() {
-        return 0;
+    public double calculateDistance(Point point) {
+        return point.y - this.y;
     }
 }
