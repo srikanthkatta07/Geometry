@@ -52,4 +52,10 @@ public class PointTest {
         assertEquals(point1, point1);
     }
 
+    @Test
+    public void shouldCalculateDistaneBetweenItself() {
+        Point point1 = new Point(1.0, 2.0);
+
+        assertEquals(0.0,point1.calculateDistance(),0.2d);
+    }
 }

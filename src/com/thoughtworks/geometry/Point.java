@@ -1,5 +1,7 @@
 package com.thoughtworks.geometry;
 
+import static java.lang.StrictMath.sqrt;
+
 public class Point {
     private double x;
     private double y;
@@ -26,5 +28,7 @@ public class Point {
         return point.x == this.x && point.y == this.y;
     }
 
-
+    public double calculateDistance() {
+        return 0;
+    }
 }
