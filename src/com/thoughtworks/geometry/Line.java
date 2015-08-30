@@ -13,16 +13,7 @@ public class Line {
     }
 
     public double length() {
-        return calculateDistance(endPoint);
-    }
-
-    private double calculateDistance(Point thatPoint) {
-        return sqrt(squareOfDifference(startPoint.getX(), endPoint.getX()) + squareOfDifference(startPoint.getY(), endPoint.getY()));
-    }
-
-
-    private double squareOfDifference(double value1, double value2) {
-        return pow(value1 - value2, 2);
+        return startPoint.distanceTo(endPoint);
     }
 
     @Override
