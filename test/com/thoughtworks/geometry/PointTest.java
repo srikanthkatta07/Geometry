@@ -66,4 +66,12 @@ public class PointTest {
 
         assertEquals(1.0,point1.calculateDistance(point2),0.2d);
     }
+
+    @Test
+    public void shouldCalculateDistaneBetweenAnotherPointWhenXValuesChanges() {
+        Point point1 = new Point(2.0, 2.0);
+        Point point2 = new Point(3.0, 2.0);
+
+        assertEquals(1.0,point1.calculateDistance(point2),0.2d);
+    }
 }

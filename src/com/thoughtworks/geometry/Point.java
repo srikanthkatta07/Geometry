@@ -29,6 +29,8 @@ public class Point {
     }
 
     public double calculateDistance(Point point) {
-        return point.y - this.y;
+        if (this.x == point.x)
+            return point.y - this.y;
+        return point.x - this.x;
     }
 }
