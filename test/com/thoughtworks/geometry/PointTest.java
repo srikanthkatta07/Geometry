@@ -56,7 +56,7 @@ public class PointTest {
     public void shouldCalculateDistaneBetweenItself() {
         Point point1 = new Point(1.0, 2.0);
 
-        assertEquals(0.0,point1.calculateDistance(point1),0.2d);
+        assertEquals(0.0, point1.calculateDistance(point1), 0.2d);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class PointTest {
         Point point1 = new Point(1.0, 2.0);
         Point point2 = new Point(1.0, 3.0);
 
-        assertEquals(1.0,point1.calculateDistance(point2),0.2d);
+        assertEquals(1.0, point1.calculateDistance(point2), 0.2d);
     }
 
     @Test
@@ -72,6 +72,14 @@ public class PointTest {
         Point point1 = new Point(2.0, 2.0);
         Point point2 = new Point(3.0, 2.0);
 
-        assertEquals(1.0,point1.calculateDistance(point2),0.2d);
+        assertEquals(1.0, point1.calculateDistance(point2), 0.2d);
+    }
+
+    @Test
+    public void shouldCalculateDistaneBetweenAnotherPointWhenBothValuesChanges() {
+        Point point1 = new Point(2.0, 2.0);
+        Point point2 = new Point(4.0, 4.0);
+
+        assertEquals(2.828, point1.calculateDistance(point2), 0.2d);
     }
 }
