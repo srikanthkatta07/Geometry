@@ -89,4 +89,20 @@ public class PointTest {
 
         assertEquals(point1.hashCode(), point1.hashCode());
     }
+
+    @Test
+    public void shouldNotEqualsAnotherPointWhichHasDifferentYValuesByHashCode() {
+        Point point1 = new Point(2.0, 2.0);
+        Point point2 = new Point(2.0, 5.0);
+
+        assertNotEquals(point1.hashCode(), point2.hashCode());
+    }
+
+    @Test
+    public void shouldNotEqualsAnotherPointWhichHasDifferentXValuesByHashCode() {
+        Point point1 = new Point(2.0, 2.0);
+        Point point2 = new Point(6.0, 5.0);
+
+        assertNotEquals(point1.hashCode(), point2.hashCode());
+    }
 }
