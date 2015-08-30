@@ -38,6 +38,6 @@ public class Point {
         double hash = 17;
         hash = hash * 31 + this.x;
         hash = hash * 31 + this.y;
-        return (int)hash;
+        return (int) hash;
     }
 }
