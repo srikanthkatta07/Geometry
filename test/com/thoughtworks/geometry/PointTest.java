@@ -82,4 +82,11 @@ public class PointTest {
 
         assertEquals(2.828, point1.distanceTo(point2), 0.2d);
     }
+
+    @Test
+    public void shouldEqualsToItselfByHashCode() {
+        Point point1 = new Point(2.0, 2.0);
+
+        assertEquals(point1.hashCode(), point1.hashCode());
+    }
 }

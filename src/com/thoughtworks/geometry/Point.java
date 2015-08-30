@@ -32,4 +32,12 @@ public class Point {
     private double squareOfDifference(double value1, double value2) {
         return pow(value1 - value2, 2);
     }
+
+    @Override
+    public int hashCode() {
+        double hash = 17;
+        hash = hash * 31 + this.x;
+        hash = hash * 31 + this.y;
+        return (int)hash;
+    }
 }
