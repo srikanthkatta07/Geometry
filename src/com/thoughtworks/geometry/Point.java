@@ -35,7 +35,7 @@ public class Point {
 
     @Override
     public int hashCode() {
-        double hash = 31;
+        double hash = 53;
         hash = hash * 31 + this.x;
         hash = hash * 31 + this.y;
         return (int) hash;
